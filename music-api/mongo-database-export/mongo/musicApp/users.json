@@ -1,0 +1,6 @@
+[
+{ "_id" : { "$oid" : "5e60c3e99635490229e76f7c" }, "username" : "user1", "password" : "$2b$10$tG0kroiD.ylIROIHWhWzB.o3t/az4wrWJI7B2pSdtlGdPCSzGXTJy", "token" : "SFOiMO9vwWhLNc60Nm6NL" },
+{ "_id" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "username" : "user2", "password" : "$2b$10$jPvwIIRHNpWw2WSrEivKKu/U0sW48RVIX7Pc4mZgokm5ZMlApbJgy", "token" : "2e0AsYpoQlJpBLIZsgref" },
+{ "_id" : { "$oid" : "5e60ecabd720f42414bb8711" }, "username" : "user3", "password" : "$2b$10$fe07t0u91ZYbiw13bWKGQOk5L8EVzbpB8jWFTcviTHJa38W8Qjn6e", "token" : "KKpHausddemzEWUx7NqXm" },
+{ "_id" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "username" : "user4", "password" : "$2b$10$L9Yj1ooJkYfhInefrcZxWePZGTBvwM754/HavVQKiv3ZeW.MY9vi2", "token" : "ux0SUcYuMKnqqD7LdkOC3" }
+]

@@ -1,0 +1,45 @@
+.track-table th {
+  font-size: 13px;
+  color: #777;
+}
+
+.track-row {
+  border: solid 2px;
+  border-color: transparent;
+}
+
+.track-row:hover {
+  border-color: #ffdb4d;
+}
+
+.track-table td {
+  color: #222;
+  padding: 10px 0;
+}
+
+.track-table td:hover:last-child{
+  color: #f33!important;
+}
+
+.track-table td:hover:last-child{
+  color: #222;
+}
+
+.Nav-link-track {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+ }
+ .Nav-link-track:hover {
+   text-decoration: none;
+   color: #fc363b;
+ }
+
+.track-overflow {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

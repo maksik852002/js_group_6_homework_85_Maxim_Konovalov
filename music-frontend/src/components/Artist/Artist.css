@@ -1,0 +1,44 @@
+.Card {
+  /* position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem; */
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    cursor: pointer;
+    position: relative;
+}
+
+.Card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+  width: 200px;
+  height: 200px;
+}
+
+.Card:hover {
+  border-top-color: #ffdb4d!important;
+  border-bottom-color: #ffdb4d!important;
+}
+
+.Card:hover:before {
+  position: absolute;
+  border: 2px solid #ffdb4d;
+  left: 0;
+  right: 0;
+  top: -1px;
+  bottom: -1px;
+  display: block;
+  content: "";
+}
+
+.Card:hover .Title{
+  color: #f33!important;
+}
