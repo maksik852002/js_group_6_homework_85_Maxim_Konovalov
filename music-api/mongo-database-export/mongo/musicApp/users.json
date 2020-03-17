@@ -1,6 +1,4 @@
 [
-{ "_id" : { "$oid" : "5e60c3e99635490229e76f7c" }, "username" : "user1", "password" : "$2b$10$tG0kroiD.ylIROIHWhWzB.o3t/az4wrWJI7B2pSdtlGdPCSzGXTJy", "token" : "SFOiMO9vwWhLNc60Nm6NL" },
-{ "_id" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "username" : "user2", "password" : "$2b$10$jPvwIIRHNpWw2WSrEivKKu/U0sW48RVIX7Pc4mZgokm5ZMlApbJgy", "token" : "2e0AsYpoQlJpBLIZsgref" },
-{ "_id" : { "$oid" : "5e60ecabd720f42414bb8711" }, "username" : "user3", "password" : "$2b$10$fe07t0u91ZYbiw13bWKGQOk5L8EVzbpB8jWFTcviTHJa38W8Qjn6e", "token" : "KKpHausddemzEWUx7NqXm" },
-{ "_id" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "username" : "user4", "password" : "$2b$10$L9Yj1ooJkYfhInefrcZxWePZGTBvwM754/HavVQKiv3ZeW.MY9vi2", "token" : "ux0SUcYuMKnqqD7LdkOC3" }
+{ "_id" : { "$oid" : "5e6f2dd8f4de3828599daa0d" }, "username" : "user", "password" : "$2b$10$J4MEGUQ3K62pXEkL/h7qkONYsHIk0z8sf4mavRoctTudtp6G9cvMG", "token" : "AWRKkNdK4kg_9UqQt4TS-", "tracks" : [ "5e5e3798cdf8f96eb86b4db3", "5e5e39a5cdf8f96eb86b4dbb", "5e60b536d1fdcf6347941524", "5e60b55ad1fdcf6347941526", "5e60b577d1fdcf6347941527", "5e5e3844cdf8f96eb86b4db6", "5e60b548d1fdcf6347941525", "5e60b5bed1fdcf6347941528", "5e60b5dfd1fdcf6347941529", "5e70c0a1f582942de767c118", "5e70c0a1f582942de767c117" ] },
+{ "_id" : { "$oid" : "5e6f43a7d88cdd340174cd0b" }, "username" : "max", "password" : "$2b$10$21.6mpHhiPfIx40ucx/Z/eypoxmg4EyDm7AUJiETLQMq0sythNBjm", "token" : "P_UH3RZbIE-238waHq8yL", "tracks" : [ "5e60b55ad1fdcf6347941526", "5e5e38ddcdf8f96eb86b4db8", "5e60b577d1fdcf6347941527", "5e60b548d1fdcf6347941525", "5e60b536d1fdcf6347941524" ] }
 ]

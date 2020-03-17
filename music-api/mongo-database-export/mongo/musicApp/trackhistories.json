@@ -1,17 +1,4 @@
 [
-{ "_id" : { "$oid" : "5e60d474580b9b1603545004" }, "trackId" : { "$oid" : "5e60b84fd1fdcf634794152e" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Thu Mar 05 2020 16:29:08 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e60d7f97ffb771931c3446a" }, "trackId" : { "$oid" : "5e60b5bed1fdcf6347941528" }, "userId" : { "$oid" : "5e60c3e99635490229e76f7c" }, "datetime" : "Thu Mar 05 2020 16:44:09 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e60f17a1337c6292eee05fe" }, "trackId" : { "$oid" : "5e60b8ced1fdcf6347941531" }, "userId" : { "$oid" : "5e60ecabd720f42414bb8711" }, "datetime" : "Thu Mar 05 2020 18:32:58 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e60f1c01337c6292eee05ff" }, "trackId" : { "$oid" : "5e60b8ced1fdcf6347941531" }, "userId" : { "$oid" : "5e60ecabd720f42414bb8711" }, "datetime" : "Thu Mar 05 2020 18:34:08 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e60f3509d86812cbd38e3a3" }, "trackId" : { "$oid" : "5e60b8ced1fdcf6347941531" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Thu Mar 05 2020 18:40:48 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e60f58ce468e12e628f7f7e" }, "trackId" : { "$oid" : "5e60b5bed1fdcf6347941528" }, "userId" : { "$oid" : "5e60c3e99635490229e76f7c" }, "datetime" : "Thu Mar 05 2020 18:50:20 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e62070cf664565753e91c56" }, "trackId" : { "$oid" : "5e5e38ddcdf8f96eb86b4db8" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Fri Mar 06 2020 14:17:16 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e62088d466e225a5e8e0a83" }, "trackId" : { "$oid" : "5e5e38ddcdf8f96eb86b4db8" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Fri Mar 06 2020 14:23:41 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e6208dc466e225a5e8e0a84" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Fri Mar 06 2020 14:25:00 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e620a7b1a12425f326c476b" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e60d0b2b28cb8126f89a342" }, "datetime" : "Fri Mar 06 2020 14:31:55 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e620b1888e0ae5f95a89534" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "datetime" : "Fri Mar 06 2020 14:34:32 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e6242212477721224c19799" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "datetime" : "Fri Mar 06 2020 18:29:21 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e6242d5fb55b413cb9969d5" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "datetime" : "Fri Mar 06 2020 18:32:21 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e6243191573dc1474d46fb5" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "datetime" : "Fri Mar 06 2020 18:33:29 GMT+0600 (GMT+06:00)" },
-{ "_id" : { "$oid" : "5e6248ae7294fd17a323d105" }, "trackId" : { "$oid" : "5e5e392bcdf8f96eb86b4dba" }, "userId" : { "$oid" : "5e620ad988e0ae5f95a89533" }, "datetime" : { "$date" : "2020-03-06T12:57:18.421+0000" } }
+{ "_id" : { "$oid" : "5e70cd46e0bb464725d94de9" }, "track" : { "$oid" : "5e60b536d1fdcf6347941524" }, "user" : { "$oid" : "5e6f2dd8f4de3828599daa0d" }, "datetime" : { "$date" : "2020-03-17T13:14:46.793+0000" } },
+{ "_id" : { "$oid" : "5e70cd48e0bb464725d94dea" }, "track" : { "$oid" : "5e60b577d1fdcf6347941527" }, "user" : { "$oid" : "5e6f2dd8f4de3828599daa0d" }, "datetime" : { "$date" : "2020-03-17T13:14:48.156+0000" } }
 ]
