@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAlbum, fetchAlbumTracks } from "../../store/actions/albumsActions";
+import { addTrackToHistory } from "../../store/actions/trackHistoryActions";
+import { addToFavorite } from "../../store/actions/usersActions";
 import { apiURL, noImage } from "../../constants";
 import Track from "../../components/Track/Track";
 import Spinner from "../../components/UI/Spinner/Spinner";
@@ -44,17 +46,19 @@ class ArtistDetial extends Component {
                     <div className="w-100">
                       <div className="row p-2" style={{color: '#777', fontSize: '13px'}}>
                         <div className='col-1 d-flex justify-content-center justify-content-sm-start'>#</div>
-                        <div className='col-6 col-lg-7'>Название трека</div>
-                        <div className='col-3'>Исполнитель</div>
+                        <div className='col-5'>Название трека</div>
+                        <div className='col-4'>Исполнитель</div>
                       </div>
                         {album&&tracks.map(el => (
                           <Track
                             key={el._id}
-                            id={this.props.match.params.id}
+                            id={el._id}
                             sn={el.sn}
                             name={el.name}
                             artist={album.artist}
                             duration={el.duration}
+                            toHistory = {() => this.props.addTrackToHistory(el._id)}
+                            toFavorite = {() => this.props.addToFavorite(el._id)}
                           />
                         ))}
                     </div>
@@ -80,7 +84,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchAlbum: id => dispatch(fetchAlbum(id)),
-    fetchAlbumTracks: id => dispatch(fetchAlbumTracks(id))
+    fetchAlbumTracks: id => dispatch(fetchAlbumTracks(id)),
+    addTrackToHistory: track => dispatch(addTrackToHistory(track)),
+    addToFavorite: track => dispatch(addToFavorite(track))
   };
 };
 

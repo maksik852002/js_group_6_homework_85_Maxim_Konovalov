@@ -13,6 +13,7 @@ module.exports = async (req, res, next) => {
   if (!user) {
     return res.status(401).send({ error: "User must be logged in" });
   }
-  req.body.userId = user._id;
+  // req.body.user = user._id;
+  req.user = user;
   next();
 };

@@ -9,7 +9,7 @@ const initialState = {
   show: false
 };
 
-const reducer = (state = initialState, action) => {
+const albumsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ALBUMS_FETCH_REQUEST:
       return { ...state, loading: true };
@@ -34,4 +34,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default albumsReducer;

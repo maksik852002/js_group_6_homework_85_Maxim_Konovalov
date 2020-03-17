@@ -2,20 +2,23 @@ const mongoose = require("mongoose");
 
 const TrackHistoryShema = new mongoose.Schema(
   {
-    userId: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true
     },
-    trackId: {
+    track: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Track",
       required: true
     },
     datetime: {
       type: Date,
-      required: true
-    }
+      default: Date.now
+    },
+    artist: {
+      type: mongoose.Schema.Types.Mixed
+    },
   },
   {
     versionKey: false

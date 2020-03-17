@@ -10,7 +10,7 @@ const initialState = {
   show: false
 };
 
-const reducer = (state = initialState, action) => {
+const artistsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ARTISTS_FETCH_REQUEST:
       return { ...state, loading: true };
@@ -41,4 +41,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default artistsReducer;

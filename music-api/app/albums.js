@@ -19,6 +19,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const router = express.Router();
+let count = 0;
 
 router.get("/", async (req, res) => {
   try {
@@ -26,9 +27,13 @@ router.get("/", async (req, res) => {
     if (req.query.artist) {
       albums = await Album.find({ artist: req.query.artist }).populate("artist").sort({year: 1}).limit(10);
     } else {
-      // tracks = await Track.aggregate([{$group : {_id : "$album", Total: {$sum : count + 1}}}]).sort({album: 1})
+      tracks = await Track.aggregate([{$group : {_id : "$album", Total: {$sum : count + 1}}}]);
       // console.log(tracks)
       albums = await Album.find().populate("artist").sort({year: 1}).limit(10);
+      // console.log(albums)
+      
+      let merge = (tracks, albums) => ([...tracks, ...albums]);
+      console.log(merge(tracks, albums))
     }
     res.send(albums);
   } catch (e) {

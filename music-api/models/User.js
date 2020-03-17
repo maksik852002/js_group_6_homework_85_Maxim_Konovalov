@@ -9,7 +9,14 @@ const UserShema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
+      validate: {
+        validator: async function (value) {
+          if (!this.isModified('username')) return true;
+          const user = await User.findOne({username: value});
+          if (user) throw new Error('This user is alredy registred');
+        }
+      }
     },
     password: {
       type: String,
@@ -18,7 +25,8 @@ const UserShema = new mongoose.Schema(
     token: {
       type: String,
       required: true
-    }
+    },
+    tracks: [String]
   },
   {
     versionKey: false

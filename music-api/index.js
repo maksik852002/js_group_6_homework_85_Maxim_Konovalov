@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const autorization = require("./authMiddleware");
 
 const artists = require("./app/artists");
 const albums = require("./app/albums");
@@ -15,7 +14,6 @@ const port = 8000;
 app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
-app.use("/track_history", autorization);
 
 const run = async () => {
   await mongoose.connect("mongodb://localhost/musicApp", {

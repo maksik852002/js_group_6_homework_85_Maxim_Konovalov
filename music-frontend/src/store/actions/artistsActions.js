@@ -1,4 +1,4 @@
-import { ARTISTS_FETCH_REQUEST, ARTISTS_FETCH_SUCCESS, ARTISTS_FETCH_FAILURE, ARTIST_FETCH_REQUEST, ARTIST_FETCH_SUCCESS, ARTIST_FETCH_FAILURE, ARTIST_ALBUMS_FETCH_REQUEST, ARTIST_ALBUMS_FETCH_SUCCESS, ARTIST_ALBUMS_FETCH_FAILURE, ARTIST_TRACKS_FETCH_REQUEST, ARTIST_TRACKS_FETCH_SUCCESS, ARTIST_TRACKS_FETCH_FAILURE, } from "./actionsTypes";
+import { ARTISTS_FETCH_REQUEST, ARTISTS_FETCH_SUCCESS, ARTISTS_FETCH_FAILURE, ARTIST_FETCH_REQUEST, ARTIST_FETCH_SUCCESS, ARTIST_FETCH_FAILURE, ARTIST_ALBUMS_FETCH_REQUEST, ARTIST_ALBUMS_FETCH_SUCCESS, ARTIST_ALBUMS_FETCH_FAILURE, ARTIST_TRACKS_FETCH_REQUEST, ARTIST_TRACKS_FETCH_SUCCESS, ARTIST_TRACKS_FETCH_FAILURE } from "./actionsTypes";
 import axios from "../../axiosBase";
 
 export const artistsFetchRequest = () => ({ type: ARTISTS_FETCH_REQUEST });
@@ -64,25 +64,3 @@ export const fetchArtistTracks = artistId => {
     }
   };
 };
-
-// export const createNews = data => {
-//   return async dispatch => {
-//     try {
-//       dispatch(newsFetchRequest());
-//       await axios.post("/news", data);
-//     } catch (e) {
-//       dispatch(newsFetchFailure(e));
-//     }
-//   };
-// };
-
-// export const deleteNews = id => {
-//   return async dispatch => {
-//     try {
-//       await axios.delete(`/news/${id}`);
-//       dispatch(fetchNews());
-//     } catch (e) {
-//       dispatch(newsDeleteFailure(e));
-//     }
-//   };
-// };
