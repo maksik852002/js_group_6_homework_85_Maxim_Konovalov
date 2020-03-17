@@ -39,10 +39,10 @@ class RegisterLoginForm extends Component {
   render() {
     console.log(this.props)
     return (
-      <div style={{background: 'url(https://yastatic.net/s3/passport-auth-customs/_/i/100/5f4fa62059c38ac55d75b8c5f5961acc.jpg) 100% 100% no-repeat', height: "100%"}}>
+      <div className="register-bg">
         <div className='container'>
-          <div className="form-wrapper">
-            <div className="register-bg m-auto py-3" style={{background: 'white', position: 'absolute', top: "40%", left: '50%', transform: 'translate(-50%, -50%)'}}>
+          <div className="registr-wrapper">
+            <div className="register-body py-3">
               <div className="register-header">
                 <button className='register-goBack' onClick={this.props.history.goBack}>{<MdKeyboardArrowLeft color="white"  size="28px"/>}</button>
                 {this.props.match.url === "/login" && (<NavLink className="register-link" to="/register">
