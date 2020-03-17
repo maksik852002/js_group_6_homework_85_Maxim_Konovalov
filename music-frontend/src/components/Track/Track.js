@@ -11,11 +11,10 @@ import "./Track.css";
  const Track = props => {
 
   const user =  useSelector(state =>  state.users.user);
-  console.log(user)
   const checkUserTracks = () => {
     let label = <AiOutlineHeart size="22px"/>
       if (user) {
-        user.tracks.forEach(el => el === props.id && (label = <AiTwotoneHeart size="22px"/>))
+        user.tracks.forEach(el => el.id === props.id && (label = <AiTwotoneHeart size="22px"/>))
       }
     return label
   };

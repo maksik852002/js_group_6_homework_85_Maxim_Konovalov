@@ -26,7 +26,9 @@ const UserShema = new mongoose.Schema(
       type: String,
       required: true
     },
-    tracks: [String]
+    tracks: {
+      type: [mongoose.Schema.Types.Mixed]
+    }
   },
   {
     versionKey: false

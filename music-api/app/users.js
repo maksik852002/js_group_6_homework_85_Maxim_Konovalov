@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/User");
+const Track = require("../models/Track");
 const bcrypt = require("bcrypt");
 
 const router = express.Router();
@@ -44,12 +45,14 @@ router.post("/sessions", async (req, res) => {
 
 router.put("/:id", auth, async (req, res) => {
   try {
+    
     const user = await User.findById(req.params.id);
-    let index = user.tracks.findIndex(el => el === req.body.track);
+    const track = await Track.findById(req.body.track).populate("album");
+    let index = user.tracks.findIndex(el => el.id.toString() === req.body.track);
       if (index !== -1) {
       user.tracks.splice(index, 1)
       } else {
-      user.tracks.push(req.body.track)
+      user.tracks.push({id: track._id, name: track.name, album: track.album, duration: track.duration, sn: track.sn})
       }
     user.save()
     res.send(user);

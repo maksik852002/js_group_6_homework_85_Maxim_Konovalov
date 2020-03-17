@@ -59,7 +59,7 @@ class RegisterLoginForm extends Component {
           <div className="form-group pt-3">
             <input
               onChange={this.inputChangeHandler}
-              type="text"
+              type="password"
               name="password"
               value={this.state.password}
               placeholder='Enter password'

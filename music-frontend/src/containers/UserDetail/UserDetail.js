@@ -17,7 +17,6 @@ class UserDetail extends Component {
 
   render() {
     const { user, trackHistory, loading } = this.props;
-    console.log(trackHistory)
     return (
       <div className="d-flex flex-wrap mt-3">
         {loading ? (
@@ -73,8 +72,33 @@ class UserDetail extends Component {
                                 name={el.track.name}
                                 date={el.datetime}
                                 artist={el.artist}
-                                // toHistory = {() => this.props.addTrackToHistory(el._id)}
-                                // toFavorite = {() => this.props.addToFavorite(el._id)}
+                                toHistory = {() => this.props.addTrackToHistory(el.track._id)}
+                                toFavorite = {() => this.props.addToFavorite(el.track._id)}
+                              />
+                            ))}
+                        </div>
+                      )}
+                    />
+                    <Route
+                      path={this.props.match.path + "/tracks"}
+                      render={() => (
+                        <div className="w-100">
+                          <div className="row p-2" style={{color: '#777', fontSize: '13px'}}>
+                            <div className='col-1 d-flex justify-content-center justify-content-sm-start'>#</div>
+                            <div className='col-5'>Название трека</div>
+                            <div className='col-4'>Альбом</div>
+                            <div className='col-2'></div>
+                          </div>
+                            {user&&user.tracks.map((el, i) => (
+                              <Track
+                                key={el.id}
+                                id = {el.id}
+                                sn={i+1}
+                                name={el.name}
+                                duration={el.duration}
+                                album={el.album}
+                                toHistory = {() => this.props.addTrackToHistory(el.id)}
+                                toFavorite = {() => this.props.addToFavorite(el.id)}
                               />
                             ))}
                         </div>
