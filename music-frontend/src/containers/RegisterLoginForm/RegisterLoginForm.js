@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerUser, loginUser } from "../../store/actions/usersActions";
+import {MdKeyboardArrowLeft} from "react-icons/md"
+import { NavLink } from "react-router-dom";
 import './RegisterLoginForm.css'
 
 class RegisterLoginForm extends Component {
@@ -35,47 +37,71 @@ class RegisterLoginForm extends Component {
   };
 
   render() {
+    console.log(this.props)
     return (
-      <>
-        <h2 className='pt-4'>
-          {this.props.match.url === "/register" ? "Зарегистрировать нового пользователя" : "Войти"}
-        </h2>
-        <form onSubmit={this.submitFormHandler}>
-          <div className="form-group pt-3">
-            <input
-              onChange={this.inputChangeHandler}
-              type="text"
-              name="username"
-              value={this.state.username}
-              placeholder='Enter username'
-              className={
-                !this.props.error ? "form-control" : "form-control is-invalid"
-              }
-            />
-            <div className={this.props.error && "invalid-feedback d-block"}>
-              {this.getFieldError("username")}
+      <div style={{background: 'url(https://yastatic.net/s3/passport-auth-customs/_/i/100/5f4fa62059c38ac55d75b8c5f5961acc.jpg) 100% 100% no-repeat', height: "100%"}}>
+        <div className='container'>
+          <div className="form-wrapper">
+            <div className="register-bg m-auto py-3" style={{background: 'white', position: 'absolute', top: "40%", left: '50%', transform: 'translate(-50%, -50%)'}}>
+              <div className="register-header">
+                <button className='register-goBack' onClick={this.props.history.goBack}>{<MdKeyboardArrowLeft color="white"  size="28px"/>}</button>
+                {this.props.match.url === "/login" && (<NavLink className="register-link" to="/register">
+                  Зарегистрироваться
+                </NavLink>
+                )}
+              </div>
+              <div className='register-title'>
+                <img
+                  src="https://cache-mskm902.cdn.yandex.net/download.cdn.yandex.net/from/yandex.ru/support/ru/music/files/logo_main.png"
+                  alt="logo"
+                  width= '213px'
+                  height='58px'
+                />
+                <h1>
+                  Остался один шаг до Музыки
+                </h1>
+              </div>
+              <form onSubmit={this.submitFormHandler}>
+                <div className="form-group pt-3">
+                  <input
+                    onChange={this.inputChangeHandler}
+                    type="text"
+                    name="username"
+                    value={this.state.username}
+                    placeholder='Enter username'
+                    className={
+                      !this.props.error ? "form-control" : "form-control is-invalid"
+                    }
+                  />
+                  <div className={this.props.error && "invalid-feedback d-block"}>
+                    {this.getFieldError("username")}
+                  </div>
+                </div>
+                <div className="form-group pt-3">
+                  <input
+                    onChange={this.inputChangeHandler}
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    placeholder='Enter password'
+                    className={
+                      !this.props.error ? "form-control" : "form-control is-invalid"
+                    }
+                  />
+                  <div className={this.props.error && "invalid-feedback d-block"}>
+                    {this.getFieldError("password")}
+                  </div>
+                </div>
+                <div className="form-group pt-3">
+                  <button type="submit" className="register-btn">
+                    {this.props.match.url === "/register" ? "Зарегистрироваться" : "Войти"}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-          <div className="form-group pt-3">
-            <input
-              onChange={this.inputChangeHandler}
-              type="password"
-              name="password"
-              value={this.state.password}
-              placeholder='Enter password'
-              className={
-                !this.props.error ? "form-control" : "form-control is-invalid"
-              }
-            />
-            <div className={this.props.error && "invalid-feedback d-block"}>
-              {this.getFieldError("password")}
-            </div>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </form>
-      </>
+        </div>
+      </div>
     );
   }
 }

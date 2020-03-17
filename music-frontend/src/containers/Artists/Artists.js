@@ -16,7 +16,7 @@ class Artists extends Component {
   render() {
     const {loading, artists} = this.props;
     return (
-      <>
+      <div className='container'>
         <h2 className='pt-4'>Исполнители</h2>
         <div className="d-flex flex-wrap">
           {loading ? (
@@ -33,7 +33,7 @@ class Artists extends Component {
               ))
           )}
         </div>
-      </>
+      </div>
     );
   }
 }

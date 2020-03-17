@@ -16,7 +16,7 @@ class Albums extends Component {
   render() {
     const {loading, albums} = this.props;
     return (
-      <>
+      <div className='container'>
         <h2 className='pt-4'>Альбомы</h2>
         <div className="d-flex flex-wrap">
           {loading ? (
@@ -35,7 +35,7 @@ class Albums extends Component {
               ))
           )}
         </div>
-      </>
+      </div>
     );
   }
 }

@@ -8,7 +8,7 @@ const UserMenu = ({click, user, clicked}) => {
     <div onClick = {click} className="user-dropdown">
       <div className="user-wrapper">
         <span className="user-wrapper-item">
-          {user.username[0].toLowerCase()}
+          {user.username[0].toUpperCase()}
         </span>
       </div>
       <div className={menu}>

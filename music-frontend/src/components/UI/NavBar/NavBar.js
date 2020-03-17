@@ -63,7 +63,7 @@ class NavBar extends Component {
               </ul>
             </div>
             {!user ? (
-                 <AnonymousMenu click={this.userDropMenuHandler} clicked={this.state.userClicked}/>
+                 <AnonymousMenu/>
                ) : (
                 <UserMenu user={user} click={this.userDropMenuHandler} clicked={this.state.userClicked}/>
                )}
